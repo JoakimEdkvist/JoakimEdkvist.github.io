@@ -4,29 +4,285 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joakim Edkvist</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-star-system-component@1.0.0/index.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+    />
+    <title>Portfolio by Joakim Edkvist</title>
   </head>
+  <!--  -->
+  <!--  -->
+  <!-- CONTENT  -->
+  <!--  -->
+  <!--  -->
   <body>
-    <h1>Projects by Joakim Edkvist</h1>
-    <ul>
-      <li>
-        <a href="https://joakimedkvist.github.io/doctor-squeeze"
-          >WebbShop for Stressballs! GroupProject in Vue 3 with Vite from Feb
-          2022. [Vue3, Vuex, Bootstrap, Multiple NPM packages]</a
-        >
-      </li>
-      <li>
-        <a href="https://joakimedkvist.github.io/currencys-vue3"
-          >Currency SoloProject in Vue 3 with Vite from Jan 2022. [Vue3, Vuex,
-          Bootstrap ]</a
-        >
-      </li>
-      <li>
-        <a href="https://joakimedkvist.github.io/vanilla.js-currencies"
-          >Currency Comparison with in Vanilla JS SoloProject from Nov 2021.
-          [Carousel, LocalStorage, Chart.JS ]</a
-        >
-      </li>
-    </ul>
+    <header
+      class="header sticky-top navbar-dark bg-dark text-white justify-content-end"
+    >
+      <a href="index.html" class="logo">#FrontEndDevelopment</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a class="navbar-item" href="index.html"> Home</a></li>
+        <li><a class="navbar-item" href="projects.html">Projects & Work</a></li>
+      </ul>
+    </header>
+    <!--ASCENE 3d-->
+    <a-scene embedded style="z-index: -100" vr-mode-ui="enabled: false"  device-orientation-permission-ui="enabled: false">
+  <a-mixin
+        id="rotation"
+        animation="property: rotation; loop: true; from:  170 0 100; to: 170 360 100; dur: 5000; easing: linear;"
+      ></a-mixin>
+
+      <a-assets>
+        <a-asset-item
+          id="asteroids"
+          response-type="arraybuffer"
+          src="https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2Fasteroides.glb?1541106805090"
+        ></a-asset-item>
+      </a-assets>
+
+
+
+
+
+  <a-entity
+        id="asteroid-belt"
+        gltf-model="#asteroids"
+        scale="2.1 2.1 2.1"
+        position="0 0 0"
+        mixin="rotation"
+
+        animation="dur: 80000;"
+      ></a-entity>
+    </a-scene>
+    <main class="container">
+      <div class="card introduction">
+        <div class="row g-3">
+          <div class="col-md-2 portrait-bg">
+            <img
+              src="./images/blackjoakim.png"
+              class="img-fluid rounded position-relative top-50 start-50 translate-middle"
+              alt="portait of Joakim"
+            />
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Welcome to my Portfolio!</h5>
+              <h6>My name is Joakim I'm a Front End Developer Student</h6>
+              <p class="card-text">
+                I am 30 years old and just moved to Gothenburg with my fiancé
+                after 7 years in Oslo.
+                My friends & collegues have described me with words like thoughtful & extrovert. Personally I really enjoy structure and flexibility when needed. <br>
+                In 2020 I decided to study to become a Web Developer and started at IT Hogskolan in Gothenburg in 2021.
+              </p>
+              <p class="card-text">On my weekends I love to travel and spend
+                time with my friends. I love tech in general so weekdays usually
+                end up in front of my computer setup or my awesome 75 inch tv.</p>
+                <h6>I can't wait to get out and discover the tech industry as an employee, If you wanna see what I've created so far in my Web career please go check out my work below the link <a href="projects.html">"Projects & Work"</a></h6><br>
+                <h6>Contact details in the bottom</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card introduction">
+        <div class="row g-3">
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Experience & Skills</h5>
+<h6>  My main working experience comes from retail industry & aviation travel business. <br> In my most recent job in the retail industry I used to work as a Team Leader with many areas of responsibilitys and different tasks.</h6>
+              <p class="card-text">
+                Team leader for Dixon's Travel / Elkjop
+                <ul>
+                  <li>Managed to keep 3 of my team members including myself in the top 10 out of 300 staff members over several periods. </li>
+                  <li>Operational responsibilty</li>
+                  <li>Leading & Coaching my own Team of 7 people with monthly conversations about score and how they can flourish.</li>
+                  <li>Interviews & Training of new Collegues</li>
+                  <li>Inventory & Remerchandising</li></ul>
+              </p>
+              <p>Cabin Attendant in Thomas Cook Airlines for Ving Norge AS
+                <ul>
+                <li>Safety</li>
+                <li>Service & Serving</li>
+                <li>Responsible for Catering & Advertising during flights </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2 bg-dark rounded-end">
+            <img
+              src="./images/skills.png"
+              class="img-fluid rounded position-relative top-50 start-50 translate-middle"
+              style="max-width: 100px"
+              alt="portait of Joakim"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card introduction">
+        <div class="row g-3">
+          <div class="col-md-2 bg-dark rounded-end">
+            <img
+              src="./images/hobbys.png"
+              class="img-fluid rounded position-relative top-50 start-50 translate-middle"
+              style="max-width: 100px"
+              alt="portait of Joakim"
+            />
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Future & plans</h5>
+              <h6>
+                I will finish my degree at IT-hogskolan around may 2022. For now
+                I'm looking for both a summer job & autumn internship.
+                <ul>
+                  <li>Summer Job from June - mid August 2022.</li>
+                  <li>Autumn Internship from w.34 - w.41 2022.</li>
+                  <li>Spring Internship 16weeks start of 2023.</li>
+                </ul>
+              </h6>
+              <p class="card-text">
+                I just finished these courses <ul><li>HTML & CSS</li>
+                <li>Vanilla Javascript</li>
+                <li>UX & UI</li>
+                <li>Javascript with Vue.js & Node.js</li></ul>
+                Currently I'm on the "Fullstack course" until summer which will
+                prepare me with the following React, Typescript, Express &
+                SQlite.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="card introduction">
+        <div class="row g-3">
+
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Contact details</h5>
+              <p class="card-text">
+                Don't hesitate to contact me for job queries or other questions!
+              </p>
+              <h6>Email:</h6>
+              <p class="copypaste-items">joakimedqvist@hotmail.se</p>
+              <h6>Telephone:</h6>
+              <p class="copypaste-items">+46 728818375</p>
+              <h6>Linkedin</h6>
+              <a
+                class="linkedin copypaste-items"
+                href="https://www.linkedin.com/in/joakimedkvist"
+              >
+                www.linkedin.com/in/joakimedkvist</a
+              >
+            </div>
+          </div>
+          <div class="col-md-2 bg-dark rounded-end">
+            <img
+              src="./images/telegramlogo.png"
+              class="img-fluid rounded position-relative top-50 start-50 translate-middle"
+              style="max-width: 100px"
+              alt="portait of Joakim"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <h5>Tools</h5>
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end logo-language">
+              <i class="devicon-html5-plain"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-css3-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-bootstrap-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded">
+              <i class="devicon-sass-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-javascript-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-vuejs-plain logo-language"></i>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-react-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-nodejs-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-mysql-plain logo-language"></i>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-dark rounded-end">
+              <i class="devicon-express-original logo-language"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
